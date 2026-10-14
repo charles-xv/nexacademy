@@ -1,6 +1,6 @@
 # NeXAcaDemY
 
-NeXAcaDemY is a full-stack e-learning platform and database management system  built as a final-year Computer Engineering project. It lets students browse and enroll in courses, track lesson progress, and subscribe to a Free/Pro plan, while instructors manage their own courses and admins manage users, courses, and security activity across the platform.
+NeXAcaDemY is a full-stack e-learning platform and database management system  built as a final-year project. It lets students browse and enroll in courses, track lesson progress, and subscribe to a Free/Pro plan, while instructors manage their own courses and admins manage users, courses, and security activity across the platform.
 
 ## Screenshots
 
