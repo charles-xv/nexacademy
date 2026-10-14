@@ -1,0 +1,166 @@
+@import "./styles/theme.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+a {
+  transition: color 0.12s ease;
+}
+
+a:active {
+  color: var(--color-primary);
+}
+
+button {
+  transition: opacity 0.12s ease;
+}
+
+button:active {
+  opacity: 0.7;
+}
+html {
+  scroll-behavior: smooth;
+}
+.btn-primary,
+.navbar-cta,
+.pricing-btn.primary,
+.login-submit-btn,
+.register-submit-btn {
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    opacity 0.15s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+.btn-primary:hover,
+.navbar-cta:hover,
+.pricing-btn.primary:hover,
+.login-submit-btn:hover,
+.register-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--color-primary-glow);
+}
+
+.btn-primary:active,
+.navbar-cta:active,
+.pricing-btn.primary:active,
+.login-submit-btn:active,
+.register-submit-btn:active {
+  transform: translateY(0);
+  opacity: 0.85;
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-6px);
+  }
+  40%,
+  80% {
+    transform: translateX(6px);
+  }
+}
+
+.shake {
+  animation: shake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+.login-field input.input-error,
+.register-field input.input-error {
+  border-color: #ef4444;
+}
+.password-input-wrapper {
+  position: relative;
+}
+.password-input-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+.password-toggle-btn:hover {
+  color: var(--color-text-primary);
+}
+
+:not(input):not(textarea) {
+  caret-color: transparent;
+}
+
+input,
+textarea {
+  caret-color: auto;
+}
+
+.instr-search,
+.courses-search,
+.admin-search,
+.browse-search,
+.hello-search-input {
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.instr-search:focus-within,
+.courses-search:focus-within,
+.admin-search:focus-within,
+.browse-search:focus-within,
+.hello-search-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-glow);
+  background-color: var(--color-surface);
+}
+
+.instr-search:focus-within svg,
+.courses-search:focus-within svg,
+.admin-search:focus-within svg,
+.browse-search:focus-within svg {
+  color: var(--color-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .instr-search,
+  .courses-search,
+  .admin-search,
+  .browse-search,
+  .hello-search-input {
+    transition: none;
+  }
+}

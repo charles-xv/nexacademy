@@ -1,0 +1,60 @@
+.course-tile,
+.mycourse-card,
+.browse-card,
+.instr-course-card,
+.feature-card,
+.pricing-card,
+.about-card {
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.course-tile:hover,
+.mycourse-card:hover,
+.browse-card:hover,
+.instr-course-card:hover,
+.feature-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-primary);
+}
+
+/* Thumbnails lift a touch on hover without escaping their card. */
+.course-tile-thumb img,
+.mycourse-thumb img,
+.browse-thumb img,
+.instr-course-thumb img {
+  transition: transform 0.35s ease;
+}
+.course-tile:hover .course-tile-thumb img,
+.mycourse-card:hover .mycourse-thumb img,
+.browse-card:hover .browse-thumb img,
+.instr-course-card:hover .instr-course-thumb img {
+  transform: scale(1.04);
+}
+
+/* Buttons and links get a consistent press feel. */
+button,
+a {
+  transition: opacity 0.15s ease, transform 0.15s ease, color 0.15s ease;
+}
+button:active:not(:disabled) {
+  transform: scale(0.985);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .course-tile,
+  .mycourse-card,
+  .browse-card,
+  .instr-course-card,
+  .feature-card,
+  .pricing-card,
+  .about-card,
+  .course-tile-thumb img,
+  .mycourse-thumb img,
+  .browse-thumb img,
+  .instr-course-thumb img,
+  button,
+  a { transition: none; }
+}

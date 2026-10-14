@@ -1,0 +1,103 @@
+/* Add to the END of your existing InstructorStudentsPage.css. */
+
+.instr-page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.instr-search {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  background-color: var(--color-surface);
+  color: var(--color-text-secondary);
+  min-width: 240px;
+}
+.instr-search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  width: 100%;
+  color: var(--color-text-primary);
+}
+
+.instr-students-table-wrap {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background-color: var(--color-surface);
+  overflow-x: auto;
+}
+.instr-students-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.instr-students-table th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+.instr-students-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+.instr-students-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.instr-students-table tbody tr:hover {
+  background-color: var(--color-surface-2);
+}
+
+.instr-student-name {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+.instr-student-email {
+  font-size: 12px;
+  font-family: monospace;
+  color: var(--color-text-secondary);
+}
+.instr-student-date {
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.instr-progress-cell {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 120px;
+}
+.instr-progress-track {
+  flex: 1;
+  height: 5px;
+  border-radius: 99px;
+  background-color: var(--color-surface-2);
+  overflow: hidden;
+}
+.instr-progress-fill {
+  height: 100%;
+  border-radius: 99px;
+  background-color: var(--color-primary);
+}
+.instr-progress-cell span {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  min-width: 32px;
+}

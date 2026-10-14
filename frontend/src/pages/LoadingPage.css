@@ -1,0 +1,30 @@
+.loading-bar-track {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 9999;
+  background: transparent;
+  pointer-events: none;
+}
+
+.loading-bar-fill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-accent)
+  );
+  box-shadow: 0 0 8px var(--color-primary);
+  transition: width 0.24s ease;
+}
+
+.loading-bar-fill.is-done {
+  transition: width 0.16s ease, opacity 0.28s ease 0.12s;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-bar-fill { transition: none; }
+}

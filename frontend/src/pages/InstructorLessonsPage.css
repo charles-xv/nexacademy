@@ -1,0 +1,214 @@
+.lessons-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+}
+.lessons-back:hover { color: var(--color-primary); }
+
+.lessons-head { margin-bottom: 22px; }
+.lessons-head h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+.lessons-head p {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.lessons-form {
+  padding: 18px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+}
+
+.lessons-field { margin-bottom: 15px; }
+.lessons-field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 6px;
+}
+.lessons-field input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--color-text-primary);
+  outline: none;
+}
+.lessons-field input:focus { border-color: var(--color-primary); }
+.lessons-hint {
+  display: block;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  margin-top: 5px;
+}
+
+.lessons-check {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.lessons-check input {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.lessons-error {
+  padding: 9px 12px;
+  margin-bottom: 13px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  background-color: rgba(220, 38, 38, 0.12);
+  color: #DC2626;
+}
+
+.lessons-add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  background-color: var(--color-primary);
+  transition: opacity 0.15s ease;
+}
+.lessons-add-btn:hover:not(:disabled) { opacity: 0.9; }
+.lessons-add-btn:disabled { opacity: 0.6; cursor: default; }
+
+.lessons-list-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.lessons-list-head h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+.lessons-preview-count {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 99px;
+  background-color: rgba(74, 222, 128, 0.15);
+  color: #22c55e;
+}
+
+.lessons-list { display: flex; flex-direction: column; gap: 10px; }
+
+.lesson-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 11px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+}
+
+.lesson-position {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 600;
+  background-color: var(--color-surface-2);
+  color: var(--color-text-secondary);
+}
+
+.lesson-thumb {
+  flex-shrink: 0;
+  width: 74px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 6px;
+  background-color: var(--color-surface-2);
+}
+
+.lesson-info { flex: 1; min-width: 0; }
+.lesson-info p {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.lesson-id {
+  font-size: 11px;
+  font-family: monospace;
+  color: var(--color-text-secondary);
+}
+
+.lesson-access {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 9px;
+  border-radius: 99px;
+  background-color: var(--color-surface-2);
+  color: var(--color-text-secondary);
+}
+.lesson-access.is-preview {
+  background-color: rgba(74, 222, 128, 0.15);
+  color: #22c55e;
+}
+
+.lesson-delete {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.lesson-delete:hover {
+  background-color: rgba(220, 38, 38, 0.12);
+  color: #DC2626;
+}
+
+@media (max-width: 640px) {
+  .lesson-thumb { display: none; }
+  .lesson-access { display: none; }
+}

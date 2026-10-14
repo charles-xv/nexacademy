@@ -1,0 +1,59 @@
+.notifs-header {
+  margin-bottom: 20px;
+}
+.notifs-header h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+.notifs-header p {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.notifs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notifs-item {
+  display: flex;
+  gap: 14px;
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.notifs-item-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: var(--color-primary-glow);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.notifs-item-body p {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+.notifs-item-body span {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  display: block;
+  margin-bottom: 6px;
+}
+.notifs-item-body small {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  opacity: 0.7;
+}

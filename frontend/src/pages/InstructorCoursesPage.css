@@ -1,0 +1,331 @@
+.instr-courses-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.instr-courses-header h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+.instr-courses-header p {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.instr-create-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.instr-create-btn:hover {
+  opacity: 0.9;
+}
+
+/* Auto-fill: 2 columns on tablet, 3-4 on desktop, no media query needed */
+.instr-course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 14px;
+}
+
+.instr-course-card {
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.15s ease;
+}
+.instr-course-card:hover {
+  border-color: var(--color-accent);
+}
+
+/* The clickable area — thumbnail and title. Buttons sit outside it
+   so they are not nested inside an anchor. */
+.instr-course-main {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  flex: 1;
+}
+
+.instr-course-actions {
+  display: flex;
+  gap: 2px;
+  padding: 6px 8px;
+  border-top: 1px solid var(--color-border);
+}
+
+.instr-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 30px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+.instr-action:hover {
+  background-color: var(--color-surface);
+  color: var(--color-accent);
+}
+.instr-action-danger:hover {
+  background-color: rgba(220, 38, 38, 0.12);
+  color: #dc2626;
+}
+
+.instr-notice {
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: rgba(34, 197, 94, 0.12);
+  color: #22c55e;
+}
+
+.instr-thumb-preview {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 8px;
+  background-color: var(--color-surface-2);
+}
+
+.instr-modal-narrow {
+  max-width: 380px;
+}
+
+.instr-confirm-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 10px;
+}
+.instr-confirm-text {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+  margin-bottom: 20px;
+}
+.instr-confirm-text strong {
+  color: var(--color-text-primary);
+}
+
+.instr-delete-btn {
+  flex: 1;
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #dc2626;
+}
+.instr-delete-btn:hover {
+  opacity: 0.9;
+}
+
+.instr-course-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  overflow: hidden;
+}
+/* This is the rule that makes the image fill the card. Do not delete it. */
+.instr-course-thumb img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.instr-status-tag {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 9px;
+  border-radius: 99px;
+  z-index: 1;
+}
+.status-draft {
+  background-color: rgba(148, 163, 184, 0.2);
+  color: var(--color-text-secondary);
+}
+.status-published {
+  background-color: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.instr-course-body {
+  padding: 12px 14px;
+}
+.instr-course-body p {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+  text-decoration: none;
+}
+.instr-course-body span {
+  font-size: 12px;
+  color: var(--color-accent);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.instr-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.instr-modal {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 420px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.instr-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.instr-modal-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+.instr-modal-header button {
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  display: flex;
+}
+
+.instr-modal-error {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  font-size: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+
+.instr-field {
+  margin-bottom: 14px;
+}
+.instr-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.instr-field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: 6px;
+}
+
+.instr-field input,
+.instr-field textarea,
+.instr-field select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-size: 13px;
+  font-family: inherit;
+}
+.instr-field input:focus,
+.instr-field textarea:focus,
+.instr-field select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.instr-modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.instr-draft-btn,
+.instr-publish-btn {
+  flex: 1;
+  padding: 11px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.instr-draft-btn {
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-primary);
+}
+.instr-draft-btn:hover {
+  background-color: var(--color-surface-2);
+}
+
+.instr-publish-btn {
+  border: none;
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
+.instr-publish-btn:hover {
+  opacity: 0.9;
+}

@@ -1,0 +1,236 @@
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--color-bg);
+}
+
+.register-card {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.register-brand-panel {
+  background-color: var(--color-primary-glow);
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.register-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.register-logo-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.register-logo-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.register-logo-accent {
+  color: var(--color-primary);
+}
+
+.register-tagline {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-top: 6px;
+  max-width: 220px;
+  text-wrap: balance;
+}
+
+.register-form-panel {
+  background-color: var(--color-surface);
+  padding: 32px 24px;
+}
+
+.register-form-panel h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+
+.register-subtitle {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin-bottom: 24px;
+}
+
+.register-field {
+  margin-bottom: 16px;
+}
+
+.register-field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: 6px;
+}
+
+.register-field input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-size: 14px;
+}
+
+.register-field input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.register-submit-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
+.register-submit-btn:hover {
+  opacity: 0.9;
+}
+
+.register-login-row {
+  text-align: center;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.register-login-row a {
+  color: var(--color-primary);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+@media (min-width: 640px) {
+  .register-card {
+    flex-direction: row;
+    max-width: 560px;
+  }
+  .register-brand-panel {
+    width: 200px;
+    flex-shrink: 0;
+    justify-content: center;
+  }
+  .register-form-panel {
+    flex: 1;
+    padding: 32px 28px;
+  }
+}
+.register-role-picker {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.register-role-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.register-role-btn.active {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-glow);
+  color: var(--color-primary);
+}
+.register-error {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  font-size: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+.gsi-wrap {
+  margin: 18px 0 16px;
+}
+
+.gsi-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.gsi-divider::before,
+.gsi-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-border);
+}
+
+.gsi-divider span {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+.gsi-target {
+  display: flex;
+  justify-content: center;
+  color-scheme: light;
+}
+.gsi-status,
+.gsi-error {
+  margin: 10px 0 0;
+  text-align: center;
+  font-size: 12px;
+}
+
+.gsi-status {
+  color: var(--color-primary);
+}
+
+.gsi-error {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  padding: 10px 12px;
+  border-radius: 8px;
+}

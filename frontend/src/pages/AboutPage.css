@@ -1,0 +1,238 @@
+
+.about-page {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+}
+
+/* ---------- hero ---------- */
+.about-hero {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 64px 20px 40px;
+  text-align: center;
+}
+.about-hero h1 {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+  margin-bottom: 18px;
+}
+.about-accent {
+  color: var(--color-primary);
+}
+.about-hero p {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--color-text-secondary);
+}
+
+/* ---------- mission ---------- */
+.about-mission {
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+}
+.about-mission-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+.about-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 14px;
+}
+.about-mission-inner h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+}
+.about-mission-inner p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+}
+
+/* ---------- values ---------- */
+.about-values {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 56px 20px 40px;
+}
+.about-values-head {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.about-values-head h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+.about-values-head p {
+  font-size: 14.5px;
+  color: var(--color-text-secondary);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.about-card {
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 15px;
+  background-color: var(--color-surface);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+.about-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-primary);
+}
+.about-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  margin-bottom: 15px;
+  color: var(--color-primary);
+  background-color: var(--color-surface-2);
+}
+.about-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 9px;
+}
+.about-card p {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+/* ---------- offer strip ---------- */
+.about-offer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px 20px 56px;
+}
+.about-offer-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 28px;
+  border-radius: 16px;
+  background-color: var(--color-surface-2);
+}
+.about-offer-item {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+  color: var(--color-primary);
+}
+.about-offer-item h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+.about-offer-item p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+/* ---------- cta ---------- */
+.about-cta {
+  max-width: 700px;
+  margin: 0 auto 72px;
+  padding: 44px 24px;
+  text-align: center;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  background-color: var(--color-surface);
+}
+.about-cta h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 10px;
+}
+.about-cta p {
+  font-size: 14.5px;
+  color: var(--color-text-secondary);
+  margin-bottom: 24px;
+}
+.about-cta-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.about-btn-primary,
+.about-btn-secondary {
+  padding: 12px 24px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    opacity 0.16s ease,
+    border-color 0.16s ease;
+}
+.about-btn-primary {
+  color: #fff;
+  background-color: var(--color-primary);
+}
+.about-btn-primary:hover {
+  opacity: 0.92;
+}
+.about-btn-secondary {
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+}
+.about-btn-secondary:hover {
+  border-color: var(--color-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-card {
+    transition: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-hero {
+    padding: 80px 40px 48px;
+  }
+  .about-hero h1 {
+    font-size: 44px;
+  }
+  .about-mission-inner {
+    padding: 60px 40px;
+  }
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-offer-inner {
+    grid-template-columns: 1fr 1fr;
+    padding: 32px 40px;
+  }
+  .about-cta {
+    padding: 52px 40px;
+  }
+}

@@ -1,0 +1,49 @@
+/* ============================================
+   THEME.CSS
+   Every color in the app lives here, once.
+   Components never hardcode a hex value — they
+   point at one of these variables instead.
+
+   Why bother? Two reasons:
+   1. Want to tweak the purple later? Change it
+      here, and it updates in every component
+      automatically — not 20 different files.
+   2. This is literally how dark mode works: we
+      swap the VALUES below, keep the NAMES the
+      same, and every component just... updates.
+   ============================================ */
+
+/* :root = the whole page. These are LIGHT MODE
+   colors — what loads by default. */
+:root {
+  --color-primary: #5B4FE8;        /* main purple - buttons, links, active states */
+  --color-primary-glow: rgba(91, 79, 232, 0.08); /* faint purple for hover backgrounds */
+  --color-accent: #E85B8A;         /* pink/coral - badges, alerts, upgrade banners */
+  --color-bg: #F6F7FF;             /* page background */
+  --color-surface: #FFFFFF;        /* navbar, cards, sidebar background */
+  --color-surface-2: #EEF0FF;      /* nested cards, input fields */
+  --color-text-primary: #0C0E1A;   /* headlines, main body text */
+  --color-text-secondary: #5C5F7A; /* subtitles, less important text */
+  --color-border: #E2E4F5;         /* thin lines around cards and inputs */
+  --color-success: #22C55E;        /* green - progress bars, "completed" */
+  --color-warning: #F59E0B;        /* amber - streaks, pending states */
+}
+
+/* This block only kicks in when the <html> tag has
+   data-theme="dark" on it. We flip that attribute
+   with JavaScript in App.jsx below. Notice the
+   variable NAMES never change — only the values.
+   That's the whole trick. */
+[data-theme='dark'] {
+  --color-primary: #7B6FF0;
+  --color-primary-glow: rgba(123, 111, 240, 0.12);
+  --color-accent: #F07BAA;
+  --color-bg: #0C0E1A;
+  --color-surface: #13152A;
+  --color-surface-2: #1C1F35;
+  --color-text-primary: #E8EAF6;
+  --color-text-secondary: #8B8FA8;
+  --color-border: #232640;
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+}

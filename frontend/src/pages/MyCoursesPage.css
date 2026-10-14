@@ -1,0 +1,142 @@
+/* Replace the entire contents of your existing MyCoursesPage.css with this.
+   The old file was styling the public catalogue layout, which this page
+   no longer uses. */
+
+.mycourses-header {
+  margin-bottom: 24px;
+}
+.mycourses-header h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+.mycourses-header p {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.mycourses-browse-btn {
+  margin-top: 12px;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--color-primary);
+  transition: opacity 0.15s ease;
+}
+.mycourses-browse-btn:hover {
+  opacity: 0.9;
+}
+
+.mycourses-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.mycourse-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    border-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.mycourse-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+.mycourse-thumb {
+  aspect-ratio: 16 / 9;
+  background-color: var(--color-surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  position: relative;
+  overflow: hidden;
+}
+.mycourse-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mycourse-tier {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+.mycourse-tier.tier-free {
+  background-color: rgba(74, 222, 128, 0.15);
+  color: #22c55e;
+}
+.mycourse-tier.tier-pro {
+  background-color: var(--color-primary-glow);
+  color: var(--color-primary);
+}
+
+.mycourse-body {
+  padding: 14px 16px 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.mycourse-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 3px;
+}
+.mycourse-instructor {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.mycourse-foot {
+  margin-top: auto;
+  padding-top: 14px;
+}
+.mycourse-progress-track {
+  height: 5px;
+  border-radius: 99px;
+  background-color: var(--color-border);
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.mycourse-progress-fill {
+  height: 100%;
+  border-radius: 99px;
+  background-color: var(--color-accent);
+  transition: width 0.3s ease;
+}
+.mycourse-progress-label {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+@media (min-width: 640px) {
+  .mycourses-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .mycourses-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
