@@ -4,7 +4,7 @@ NeXAcaDemY is a full-stack e-learning platform and database management system  b
 
 ## Screenshots
 
-| Instructor Dashboard | Student Login | Student Dashboard |
+| Instructor Dashboard | Student/Instructor Login | Student Dashboard |
 |---|---|---|
 | ![Instructor Dashboard](instructor-dashboard.png) | ![Student Login](student-login.png) | ![Student Dashboard](student-dashboard.png) |
 
